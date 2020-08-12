@@ -1,0 +1,236 @@
+$charcoal: #1f1f1f;
+$gold: #cab884; 
+$white: rgb(240, 240, 240);
+$mainPadding: 5vw;
+$lightFont: 'Monument Extended Light', 'san-serif';
+$boldFont: 'Monument Extended', 'san-serif';
+$subFont: "Circular Std Book", 'san-serif';
+$scrollBarWidth: 10px;
+$screenWidth: calc(100vw - 10px);
+
+
+@mixin text($size: 13px, $font: $lightFont, $color: $white) {
+  font-size: $size;
+  font-family: $font;
+  color: $color;
+}
+
+@mixin centerBg() {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin smoothButton() {
+  transition: all 0.4s;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #3d3d3d;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #696969;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: $charcoal;
+  color: $white;
+}
+
+#nav {
+  z-index: 10;
+  width: $screenWidth;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  #nav-bar {
+    width: 450px;
+    height: 100%;
+    background-color: transparent;
+    margin: 0 $mainPadding;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    @include text(14px, $lightFont, $white);
+    #nav-icon {
+      font-size: 26px
+    }
+    a {
+      cursor: pointer;
+      transition: all 0.4s;
+      &:hover {
+        color: rgba($gold, 0.8)
+      }
+    }
+  }
+}
+
+#show {
+  width: $screenWidth;
+  height: 90vh;
+  background-image: url('https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  @include centerBg();
+  #show-linear {
+    height: 90vh;
+    width: $screenWidth;
+    position: relative;
+    background-image: linear-gradient(180deg, transparent, $charcoal);
+  }
+}
+#show-title {
+  margin: 0 $mainPadding;
+  position: relative;
+  bottom: -60vh;
+}
+#show-title-small {
+  @include text(15px, $lightFont, $gold);
+  text-transform: uppercase;
+}
+#show-title-big {
+  @include text(90px, $boldFont, $white);
+  text-transform: uppercase;
+  span {
+    // text-shadow: -1px 0 $gold, 0 1px $gold, 1px 0 $gold, 0 -1px $gold;
+    -webkit-text-stroke: 1px $gold;
+    color: transparent
+  }
+}
+
+#show-intro {
+  @include text(10px, $lightFont, $white);
+  display: flex;
+  align-items: center;
+  #show-down-arrow {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+}
+#show-rotate-intro {
+  position: absolute;
+  top: 110;
+  right: -70;
+
+  margin: 20px 20px 0 0;
+  @include text(10px, $subFont, rgba($white, 0.7));
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  transform: rotate(90deg);
+}
+#main {
+  margin-top: 100px;
+  #main-intro-title {
+    @include text(12px, $lightFont, $gold);
+    text-align: center;
+  }
+  #main-intro-text {
+    @include text(16px, $subFont, white);
+    text-align: center;
+    margin: 20px 350px;
+    word-spacing: 0.1em;
+    margin-bottom: 100px;
+  }
+
+  #main-title {
+    @include text(16px, $lightFont, $white);
+    margin-left: $mainPadding;
+  }
+
+  #main-list {
+    min-height: 300px;
+    margin: 35px $mainPadding;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include text(10px, $lightFont, $white);
+    .game-item {
+      cursor: pointer;
+      width: 28.5vw;
+      height: 200px;
+      margin-top: 2vw;
+      @include centerBg();
+      @include smoothButton();
+      background-color: #303030;
+    }
+  }
+}
+
+.game-item-filter {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, transparent, rgba($charcoal, 0.7)) ;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .game-name {
+    @include text(18px, $lightFont, white);
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 2px solid $gold;
+    word-wrap: break-word;
+  }
+  .game-info {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 2px solid $gold;
+    @include text(14px, $subFont, rgba($white, 0.7));
+    .star-icon {
+      color: $gold;
+    }
+  }
+}
+
+#load-button-container {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #load-button {
+    cursor: pointer;
+    padding: 10px 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    border-radius: 99px;
+    @include text(11px, $lightFont, $gold);
+    @include smoothButton();
+    margin-bottom: 30px;
+  }
+}
+
+#load-icon {
+  font-size: 30px;
+  color: $gold;
+  transition: all 0.4s;
+  animation: roundRotate 500ms linear infinite;
+}
+
+@keyframes roundRotate {
+  from {transform: rotate(0)}
+  to {transform: rotate(360deg)}
+}
+
+#footer {
+  background-color: #252525;
+  width: $screenWidth;
+  height: 20vw;
+}

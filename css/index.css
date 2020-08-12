@@ -1,0 +1,322 @@
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #3d3d3d;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #696969;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+}
+
+#nav {
+  z-index: 10;
+  width: calc(100vw - 10px);
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#nav #nav-bar {
+  width: 450px;
+  height: 100%;
+  background-color: transparent;
+  margin: 0 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Monument Extended Light", "san-serif";
+  color: #f0f0f0;
+}
+
+#nav #nav-bar #nav-icon {
+  font-size: 26px;
+}
+
+#nav #nav-bar a {
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#nav #nav-bar a:hover {
+  color: rgba(202, 184, 132, 0.8);
+}
+
+#show {
+  width: calc(100vw - 10px);
+  height: 90vh;
+  background-image: url("https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#show #show-linear {
+  height: 90vh;
+  width: calc(100vw - 10px);
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#1f1f1f));
+  background-image: linear-gradient(180deg, transparent, #1f1f1f);
+}
+
+#show-title {
+  margin: 0 5vw;
+  position: relative;
+  bottom: -60vh;
+}
+
+#show-title-small {
+  font-size: 15px;
+  font-family: "Monument Extended Light", "san-serif";
+  color: #cab884;
+  text-transform: uppercase;
+}
+
+#show-title-big {
+  font-size: 90px;
+  font-family: "Monument Extended", "san-serif";
+  color: #f0f0f0;
+  text-transform: uppercase;
+}
+
+#show-title-big span {
+  -webkit-text-stroke: 1px #cab884;
+  color: transparent;
+}
+
+#show-intro {
+  font-size: 10px;
+  font-family: "Monument Extended Light", "san-serif";
+  color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#show-intro #show-down-arrow {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+#show-rotate-intro {
+  position: absolute;
+  top: 110;
+  right: -70;
+  margin: 20px 20px 0 0;
+  font-size: 10px;
+  font-family: "Circular Std Book", "san-serif";
+  color: rgba(240, 240, 240, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#main {
+  margin-top: 100px;
+}
+
+#main #main-intro-title {
+  font-size: 12px;
+  font-family: "Monument Extended Light", "san-serif";
+  color: #cab884;
+  text-align: center;
+}
+
+#main #main-intro-text {
+  font-size: 16px;
+  font-family: "Circular Std Book", "san-serif";
+  color: white;
+  text-align: center;
+  margin: 20px 350px;
+  word-spacing: 0.1em;
+  margin-bottom: 100px;
+}
+
+#main #main-title {
+  font-size: 16px;
+  font-family: "Monument Extended Light", "san-serif";
+  color: #f0f0f0;
+  margin-left: 5vw;
+}
+
+#main #main-list {
+  min-height: 300px;
+  margin: 35px 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 10px;
+  font-family: "Monument Extended Light", "san-serif";
+  color: #f0f0f0;
+}
+
+#main #main-list .game-item {
+  cursor: pointer;
+  width: 28.5vw;
+  height: 200px;
+  margin-top: 2vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #303030;
+}
+
+#main #main-list .game-item:hover {
+  opacity: 0.8;
+}
+
+#main #main-list .game-item:active {
+  opacity: 0.6;
+}
+
+.game-item-filter {
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(31, 31, 31, 0.7)));
+  background: linear-gradient(180deg, transparent, rgba(31, 31, 31, 0.7));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.game-item-filter .game-name {
+  font-size: 18px;
+  font-family: "Monument Extended Light", "san-serif";
+  color: white;
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #cab884;
+  word-wrap: break-word;
+}
+
+.game-item-filter .game-info {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 2px solid #cab884;
+  font-size: 14px;
+  font-family: "Circular Std Book", "san-serif";
+  color: rgba(240, 240, 240, 0.7);
+}
+
+.game-item-filter .game-info .star-icon {
+  color: #cab884;
+}
+
+#load-button-container {
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#load-button-container #load-button {
+  cursor: pointer;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  outline: 0;
+  border: none;
+  border-radius: 99px;
+  font-size: 11px;
+  font-family: "Monument Extended Light", "san-serif";
+  color: #cab884;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  margin-bottom: 30px;
+}
+
+#load-button-container #load-button:hover {
+  opacity: 0.8;
+}
+
+#load-button-container #load-button:active {
+  opacity: 0.6;
+}
+
+#load-icon {
+  font-size: 30px;
+  color: #cab884;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-animation: roundRotate 500ms linear infinite;
+          animation: roundRotate 500ms linear infinite;
+}
+
+@-webkit-keyframes roundRotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes roundRotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#footer {
+  background-color: #252525;
+  width: calc(100vw - 10px);
+  height: 20vw;
+}
+/*# sourceMappingURL=index.css.map */
