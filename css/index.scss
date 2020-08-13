@@ -1,7 +1,32 @@
 // @import url(https://db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended);
-@font-face {font-family: "Monument Extended"; src: url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.eot"); src: url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.woff") format("woff"), url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.svg#Monument Extended") format("svg"); }
-@import url(https://db.onlinewebfonts.com/c/5a7f8e143dbda0b26952bc287ad05cc4?family=Monument+Extended+Light);
-@import url(https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+// @import url(https://db.onlinewebfonts.com/c/5a7f8e143dbda0b26952bc287ad05cc4?family=Monument+Extended+Light);
+// @import url(https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+@font-face {font-family: "Monument Extended"; 
+  src: url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.eot"); 
+  src: url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.eot?#iefix") format("embedded-opentype"), 
+  url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.woff2") format("woff2"), 
+  url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.woff") format("woff"), 
+  url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.ttf") format("truetype"), 
+  url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.svg#Monument Extended") format("svg"); 
+}
+@font-face {font-family: "Monument Extended Light";
+  src: url("https://db.onlinewebfonts.com/t/5a7f8e143dbda0b26952bc287ad05cc4.eot"); /* IE9*/
+  src: url("https://db.onlinewebfonts.com/t/5a7f8e143dbda0b26952bc287ad05cc4.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("https://db.onlinewebfonts.com/t/5a7f8e143dbda0b26952bc287ad05cc4.woff2") format("woff2"), /* chrome firefox */
+  url("https://db.onlinewebfonts.com/t/5a7f8e143dbda0b26952bc287ad05cc4.woff") format("woff"), /* chrome firefox */
+  url("https://db.onlinewebfonts.com/t/5a7f8e143dbda0b26952bc287ad05cc4.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+  url("https://db.onlinewebfonts.com/t/5a7f8e143dbda0b26952bc287ad05cc4.svg#Monument Extended Light") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {font-family: "Circular Std Book";
+  src: url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot"); /* IE9*/
+  src: url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2"), /* chrome firefox */
+  url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff") format("woff"), /* chrome firefox */
+  url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+  url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book") format("svg"); /* iOS 4.1- */
+}
+
 
 $charcoal: #1f1f1f;
 $gold: #cab884; 
