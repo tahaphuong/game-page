@@ -54,16 +54,16 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
+  background-image: linear-gradient(180deg, rgba($charcoal, 0.7), transparent);
   #nav-bar {
     width: 450px;
     height: 100%;
-    background-color: transparent;
     margin: 0 $mainPadding;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
-    @include text(14px, $lightFont, $white);
+    @include text(14px, $boldFont, $white);
     #nav-icon {
       font-size: 26px
     }
@@ -83,7 +83,8 @@ html, body {
   background-image: url('https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
   @include centerBg();
   #show-linear {
-    height: 90vh;
+    height: 60vh;
+    padding-bottom: 30vh;
     width: $screenWidth;
     position: relative;
     background-image: linear-gradient(180deg, transparent, $charcoal);
@@ -230,7 +231,33 @@ html, body {
 }
 
 #footer {
-  background-color: #252525;
+  background-color: #2b2b2b;
   width: $screenWidth;
   height: 20vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  #footer-title {
+    @include text(13px, $lightFont, $gold);
+    text-transform: uppercase;
+  }
+  #footer-email {
+    cursor: pointer;
+    @include text(45px, $boldFont, transparent);
+    -webkit-text-stroke: 1px $white;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    margin: 20px 0;
+    &:hover {
+      color: $white
+    }
+  }
+  #footer-ps {
+    @include text(14px, $subFont, rgba(white, 0.5));
+    #heart-icon {
+      font-size: 20px;
+      color: #b94c4cc5;
+    }
+  }
 }
