@@ -47,6 +47,14 @@ html, body {
   color: $white;
 }
 
+a {
+  color: $white;
+  text-decoration: none;
+  &:visited{ 
+    color: inherit;
+  }
+}
+
 #nav {
   z-index: 10;
   width: $screenWidth;
