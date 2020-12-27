@@ -4,4 +4,4 @@
 - View page (not responsive): https://tahaphuong.github.io/game-page
 (Horizontal mobile view only)
 
-(And click on/press "Load more" on the end of the list to, erm, load more)
+(And click on/press "Load more" on the end of the video games list to, erm, load more)
