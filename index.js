@@ -3,16 +3,35 @@ window.onload = start
 let list = document.getElementById('main-list')
 let loadButton = document.getElementById('load-button')
 let loadButtonCon = document.getElementById('load-button-container')
-let arr = []
+let arr = [
+  {
+    "background_image": "https://media.rawg.io/media/screenshots/a7c/a7c43871a54bed6573a6a429451564ef.jpg",
+    "name": "Game 1",
+    "rating": "3.5",
+    "genres": [{"name": "Action", "name": "Adventure"}]
+  },
+  {
+    "background_image": "https://media.rawg.io/media/screenshots/a7c/a7c43871a54bed6573a6a429451564ef.jpg",
+    "name": "Game 2",
+    "rating": "4.7",
+    "genres": [{"name": "Action"}]
+  },
+  {
+    "background_image": "https://media.rawg.io/media/screenshots/a7c/a7c43871a54bed6573a6a429451564ef.jpg",
+    "name": "Game 3",
+    "rating": "5.0",
+    "genres": [{"name": "Comedy"}]
+  }
+]
 let page = 1
 
 async function start() {
   list.innerHTML = 'loading...'
   loadButton.style.display = 'none'
   try {
-    arr = await getData(page)
+    // arr = await getData(page)
     loadButton.style.display = 'flex'
-    // list.innerHTML = ''
+    list.innerHTML = ''
     for (let item of arr) {
       list.innerHTML += gameItem(item)
     }
