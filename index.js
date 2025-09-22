@@ -12,7 +12,7 @@ async function start() {
   try {
     arr = await getData(page)
     loadButton.style.display = 'flex'
-    list.innerHTML = ''
+    // list.innerHTML = ''
     for (let item of arr) {
       list.innerHTML += gameItem(item)
     }
